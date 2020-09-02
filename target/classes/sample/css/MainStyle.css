@@ -1,0 +1,31 @@
+/*root类选择器给所有的元素设置样式*/
+.root {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-background-image: url("../images/bg.png");
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+}
+
+/*button类型选择器设置所有Button的背景色*/
+.button {
+    -fx-background-color: darkturquoise;
+}
+
+/*hover伪类选择器设置鼠标移过Button时的背景色*/
+.button:hover {
+    -fx-background-color: skyblue;
+}
+
+/*pressed点击样式*/
+.button:pressed {
+    -fx-background-color: blue;
+}
+
+/*id选择器设置Label标题的样式*/
+#lblTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Microsoft YaHei";
+}

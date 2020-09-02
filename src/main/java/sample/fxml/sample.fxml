@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #0d66fe;" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="66.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="534.0" minWidth="10.0" prefWidth="524.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="257.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="257.0" minHeight="0.0" prefHeight="52.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="346.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="301.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="327.0" minHeight="10.0" prefHeight="281.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label contentDisplay="RIGHT" prefHeight="35.0" prefWidth="60.0" text="关键字:" textFill="#ffffff" GridPane.rowIndex="1">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="16.0" />
+            </font>
+            <GridPane.margin>
+                <Insets left="15.0" top="5.0" />
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="keywords" prefHeight="30.0" prefWidth="480.0" promptText="请输入关键字，多个关键字以逗号分隔..." GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets right="10.0" top="5.0" />
+            </GridPane.margin>
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label contentDisplay="RIGHT" prefHeight="35.0" prefWidth="60.0" text="数据源:" textFill="#ffffff" GridPane.rowIndex="2">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="16.0" />
+            </font>
+            <GridPane.margin>
+                <Insets left="15.0" top="5.0" />
+            </GridPane.margin>
+        </Label>
+        <Label contentDisplay="RIGHT" prefHeight="35.0" prefWidth="60.0" text="   结果:" textFill="#ffffff" GridPane.rowIndex="4">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="16.0" />
+            </font>
+            <GridPane.margin>
+                <Insets left="14.0" />
+            </GridPane.margin>
+        </Label>
+        <TextArea fx:id="outcome" editable="false" focusTraversable="false" prefHeight="288.0" prefWidth="459.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets bottom="10.0" right="10.0" top="3.0" />
+            </GridPane.margin>
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+        <HBox prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <children>
+                <Button fx:id="reset" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#reset" text="重置" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="105.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#submit" text="执行" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="25.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="save" alignment="CENTER" mnemonicParsing="false" onAction="#save" text="导出" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="25.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="interrupt" alignment="CENTER" mnemonicParsing="false" onAction="#exit" text="退出" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="25.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <children>
+                <TextField fx:id="sourceText" prefHeight="30.0" prefWidth="471.0" promptText="请输入或选择文件夹...">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets top="5.0" />
+                    </HBox.margin>
+                </TextField>
+                <Button fx:id="selectBtn" mnemonicParsing="false" onAction="#selectDirectory" prefHeight="30.0" prefWidth="57.0" text="选择" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <Label fx:id="lblTitle" contentDisplay="RIGHT" prefHeight="32.0" prefWidth="240.0" text="word关键字查询系统" textFill="#ffffff" GridPane.columnIndex="1">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="22.0" />
+            </font>
+            <GridPane.margin>
+                <Insets left="130.0" top="12.0" />
+            </GridPane.margin>
+        </Label>
+    </children>
+</GridPane>
