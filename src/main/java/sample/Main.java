@@ -24,5 +24,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         ThreadUtil.init();
         launch(args);
+        System.out.println(args);
     }
 }
